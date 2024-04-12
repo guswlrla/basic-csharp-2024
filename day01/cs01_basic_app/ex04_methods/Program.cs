@@ -6,11 +6,10 @@ namespace ex04_methods
     {
         static void Main(string[] args)
         {
-            int x = 3;
-            int y = 4;
+            int x = 3; int y = 4;
 
             BasicSwap(x, y);
-            Console.WriteLine($"x = {x}, y = {y}");
+            Console.WriteLine($"BasicSwap -> x = {x}, y = {y}");
 
             RefSwap(ref x, ref y); // 참조로 매개변수를 사용할 땐 ref를 써줘야 함
             Console.WriteLine($"RefSwap -> x = {x}, y = {y}");
@@ -84,6 +83,9 @@ namespace ex04_methods
         {
             return a + b;
         }
-        public static float Plus 
+        public static float Plus(float a, float b)
+        { 
+            return a + b;
+        }
     }
 }
