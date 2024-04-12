@@ -26,6 +26,7 @@
         public static void MyHandler(string message)
         {
             //Console.WriteLine("다른 일을 처리합니다");
+            //Console.ReadLine();
             //Console.Clear();
             Console.WriteLine($"[{DateTime.Now.ToShortTimeString()}] : {message}");
         }
@@ -41,6 +42,7 @@
             }
 
             // notifier.SomethingHappend(30); // 이벤트핸들러는 함수가 아니기 때문에 호출불가
+
             #region "익명 메서드"
 
                 MyDelegate callback; // 대리자
