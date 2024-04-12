@@ -45,15 +45,15 @@
 
             #region "익명 메서드"
 
-                MyDelegate callback; // 대리자
-                                     // 메서드 이름이 존재x
-                                     // 익명 메서드, 한 번 사용이후 다시 호출할 필요가 없을 때 사용
-                callback = delegate (int a, int b)
-                {
-                    return a + b;
-                };
+                //MyDelegate callback; // 대리자
+                //                     // 메서드 이름이 존재x
+                //                     // 익명 메서드, 한 번 사용이후 다시 호출할 필요가 없을 때 사용
+                //callback = delegate (int a, int b)
+                //{
+                //    return a + b;
+                //};
 
-                var result = callback(10, 4);
+                //var result = callback(10, 4);
 
                 #endregion
         }
