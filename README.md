@@ -294,14 +294,14 @@
 
 ## 5일차
 - 윈폼 UI 개발(계속)
-    - 스레드
-    - 파일 입출력
+    - 스레드 추가
+    - 파일 입출력 추가
     - 비동기 작업 앱
     - 윈도우 탐색기 앱
     - 도서관리 앱 with SQL Server
     - ModernUI 앱
     - 국가교통정보센터 CCTV뷰앱
-
+    - IoT Dummy 앱 with SQL Server
 
 
 - 예제 프로젝트
