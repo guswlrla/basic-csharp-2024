@@ -314,8 +314,8 @@
 
 ## 6일차
 - 윈도우 탐색기 앱
-- 도서관리 앱 with SQL Server
 - ModernUI 앱
+- 도서관리 앱 with SQL Server
 - 국가교통정보센터 CCTV뷰앱
 - IoT Dummy 앱 with SQL Server
 
