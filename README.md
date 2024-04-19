@@ -331,17 +331,20 @@
         https://github.com/guswlrla/basic-csharp-2024/assets/158007465/4adede97-fedc-482f-9af8-4812dd33fb28
 
     - 도서관리 앱 with SQL Server(Base) ModernUI(NuGet패키지)
+    ```cs
+    // 값형식 변수에 null값을 넣을 수 있도록 만들어주는 기능 Nullable. 변수명 뒤에 ? 추가
+    int? a = null;
+    double? a = null;
+    float? a = null;
+    ````
+        - 로그인 패스워드 암호화
 
 ## 8일차
 - 토이 프로젝트
     - 도서관리 앱 종료
     - IoT Dummy 앱 with SQL Server(IoT, DB)
+
     - 국가교통정보센터 CCTV뷰 앱(OpenAI, NuGet dll, NetWork, UI디자인, 비동기메서드)
 
-
-
-
-
-    - ModernUI 앱(UI 디자인)
 ## 개인 토이프로젝트
 
