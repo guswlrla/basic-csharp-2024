@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBookInfo));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.DgvResult = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -191,7 +190,7 @@
             this.TxtIsbn.CustomButton.Visible = false;
             this.TxtIsbn.Lines = new string[0];
             this.TxtIsbn.Location = new System.Drawing.Point(115, 219);
-            this.TxtIsbn.MaxLength = 32767;
+            this.TxtIsbn.MaxLength = 13;
             this.TxtIsbn.Name = "TxtIsbn";
             this.TxtIsbn.PasswordChar = '\0';
             this.TxtIsbn.PromptText = "ISBN 입력";
@@ -206,6 +205,7 @@
             this.TxtIsbn.WaterMark = "ISBN 입력";
             this.TxtIsbn.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtIsbn.WaterMarkFont = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIsbn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIsbn_KeyPress);
             // 
             // TxtNames
             // 
@@ -378,7 +378,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmBookInfo";
             this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "책정보";
