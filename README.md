@@ -373,5 +373,8 @@
     - 특징
     - 배운점
 
+    https://github.com/guswlrla/basic-csharp-2024/assets/158007465/422fe7ee-2c26-414b-a856-cf2bc7b7a3b6
+
+
     
 
