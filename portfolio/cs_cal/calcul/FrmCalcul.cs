@@ -36,23 +36,6 @@ namespace calcul
             }
         }
 
-        private void BtnCal_Click(object sender, EventArgs e)
-        {
-            double totalScore = 0;
-            int totalCredits = 0;
-
-            for (int i = 0; i < crds.Length; i++)
-            {
-                if (titles[i].Text != "")
-                {
-                    int crd = int.Parse(crds[i].SelectedItem.ToString());
-                    totalCredits += crd;
-                    totalScore += crd * GetGrade(grds[i].SelectedItem.ToString());
-                }
-            }
-            TxtGrade.Text = (totalScore / totalCredits).ToString("0.00");
-        }
-
         private double GetGrade(string text)
         {
             double grade = 0;
@@ -68,6 +51,43 @@ namespace calcul
             else grade = 0;
 
             return grade;
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            TxtGrade.Text = "";
+
+            foreach (var textBox in titles)
+            {
+                textBox.Text = "";
+            }
+
+            foreach (var comboBox in crds)
+            {
+                comboBox.Text = "";
+            }
+
+            foreach (var comboBox in grds)
+            {
+                comboBox.Text = "";
+            }
+        }
+
+        private void BtnCal_Click_1(object sender, EventArgs e)
+        {
+            double totalScore = 0;
+            int totalCredits = 0;
+
+            for (int i = 0; i < crds.Length; i++)
+            {
+                if (titles[i].Text != "")
+                {
+                    int crd = int.Parse(crds[i].SelectedItem.ToString());
+                    totalCredits += crd;
+                    totalScore += crd * GetGrade(grds[i].SelectedItem.ToString());
+                }
+            }
+            TxtGrade.Text = (totalScore / totalCredits).ToString("0.00");
         }
     }
 }
