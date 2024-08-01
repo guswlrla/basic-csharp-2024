@@ -1,6 +1,6 @@
 ﻿namespace NewBookRentalShopApp
 {
-    partial class FrmbookDivision
+    partial class FrmBookDivision
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBookDivision));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.DgvResult = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -60,7 +61,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.Size = new System.Drawing.Size(760, 370);
-            this.splitContainer1.SplitterDistance = 373;
+            this.splitContainer1.SplitterDistance = 374;
             this.splitContainer1.TabIndex = 0;
             // 
             // DgvResult
@@ -70,7 +71,7 @@
             this.DgvResult.Location = new System.Drawing.Point(0, 0);
             this.DgvResult.Name = "DgvResult";
             this.DgvResult.RowTemplate.Height = 23;
-            this.DgvResult.Size = new System.Drawing.Size(373, 370);
+            this.DgvResult.Size = new System.Drawing.Size(374, 370);
             this.DgvResult.TabIndex = 0;
             this.DgvResult.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResult_CellClick);
             // 
@@ -87,14 +88,14 @@
             this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(383, 370);
+            this.groupBox1.Size = new System.Drawing.Size(382, 370);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "책장르 입력항목";
             // 
             // BtnDel
             // 
-            this.BtnDel.Location = new System.Drawing.Point(292, 108);
+            this.BtnDel.Location = new System.Drawing.Point(272, 138);
             this.BtnDel.Name = "BtnDel";
             this.BtnDel.Size = new System.Drawing.Size(70, 35);
             this.BtnDel.TabIndex = 8;
@@ -104,7 +105,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(216, 108);
+            this.BtnSave.Location = new System.Drawing.Point(196, 138);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(70, 35);
             this.BtnSave.TabIndex = 7;
@@ -114,7 +115,7 @@
             // 
             // BtnNew
             // 
-            this.BtnNew.Location = new System.Drawing.Point(140, 108);
+            this.BtnNew.Location = new System.Drawing.Point(120, 138);
             this.BtnNew.Name = "BtnNew";
             this.BtnNew.Size = new System.Drawing.Size(70, 35);
             this.BtnNew.TabIndex = 6;
@@ -128,7 +129,7 @@
             // 
             // 
             this.TxtNames.CustomButton.Image = null;
-            this.TxtNames.CustomButton.Location = new System.Drawing.Point(186, 1);
+            this.TxtNames.CustomButton.Location = new System.Drawing.Point(170, 1);
             this.TxtNames.CustomButton.Name = "";
             this.TxtNames.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TxtNames.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -137,7 +138,7 @@
             this.TxtNames.CustomButton.UseSelectable = true;
             this.TxtNames.CustomButton.Visible = false;
             this.TxtNames.Lines = new string[0];
-            this.TxtNames.Location = new System.Drawing.Point(117, 70);
+            this.TxtNames.Location = new System.Drawing.Point(120, 56);
             this.TxtNames.MaxLength = 32767;
             this.TxtNames.Name = "TxtNames";
             this.TxtNames.PasswordChar = '\0';
@@ -147,7 +148,7 @@
             this.TxtNames.SelectionLength = 0;
             this.TxtNames.SelectionStart = 0;
             this.TxtNames.ShortcutsEnabled = true;
-            this.TxtNames.Size = new System.Drawing.Size(208, 23);
+            this.TxtNames.Size = new System.Drawing.Size(192, 23);
             this.TxtNames.TabIndex = 5;
             this.TxtNames.UseSelectable = true;
             this.TxtNames.WaterMark = "구분명 입력";
@@ -160,7 +161,7 @@
             // 
             // 
             this.TxtDivision.CustomButton.Image = null;
-            this.TxtDivision.CustomButton.Location = new System.Drawing.Point(186, 1);
+            this.TxtDivision.CustomButton.Location = new System.Drawing.Point(170, 1);
             this.TxtDivision.CustomButton.Name = "";
             this.TxtDivision.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TxtDivision.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -169,7 +170,7 @@
             this.TxtDivision.CustomButton.UseSelectable = true;
             this.TxtDivision.CustomButton.Visible = false;
             this.TxtDivision.Lines = new string[0];
-            this.TxtDivision.Location = new System.Drawing.Point(117, 41);
+            this.TxtDivision.Location = new System.Drawing.Point(120, 27);
             this.TxtDivision.MaxLength = 32767;
             this.TxtDivision.Name = "TxtDivision";
             this.TxtDivision.PasswordChar = '\0';
@@ -179,7 +180,7 @@
             this.TxtDivision.SelectionLength = 0;
             this.TxtDivision.SelectionStart = 0;
             this.TxtDivision.ShortcutsEnabled = true;
-            this.TxtDivision.Size = new System.Drawing.Size(208, 23);
+            this.TxtDivision.Size = new System.Drawing.Size(192, 23);
             this.TxtDivision.TabIndex = 4;
             this.TxtDivision.UseSelectable = true;
             this.TxtDivision.WaterMark = "구분코드 입력";
@@ -189,7 +190,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(60, 74);
+            this.metroLabel3.Location = new System.Drawing.Point(59, 60);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(51, 19);
             this.metroLabel3.TabIndex = 2;
@@ -199,21 +200,21 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(46, 45);
+            this.metroLabel2.Location = new System.Drawing.Point(45, 31);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(65, 19);
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "구분코드";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // FrmbookDivision
+            // FrmBookDivision
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "FrmbookDivision";
-            this.Style = MetroFramework.MetroColorStyle.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FrmBookDivision";
             this.Text = "책장르";
             this.Load += new System.EventHandler(this.FrmLoginUser_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -232,12 +233,12 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView DgvResult;
         private System.Windows.Forms.GroupBox groupBox1;
+        private MetroFramework.Controls.MetroButton BtnDel;
+        private MetroFramework.Controls.MetroButton BtnSave;
         private MetroFramework.Controls.MetroButton BtnNew;
         private MetroFramework.Controls.MetroTextBox TxtNames;
         private MetroFramework.Controls.MetroTextBox TxtDivision;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroButton BtnDel;
-        private MetroFramework.Controls.MetroButton BtnSave;
     }
 }

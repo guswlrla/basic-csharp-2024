@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtUserId = new System.Windows.Forms.TextBox();
@@ -39,7 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 70);
+            this.label1.Location = new System.Drawing.Point(44, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 0;
@@ -48,7 +49,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(66, 103);
+            this.label2.Location = new System.Drawing.Point(56, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 1;
@@ -56,28 +57,28 @@
             // 
             // TxtUserId
             // 
-            this.TxtUserId.Location = new System.Drawing.Point(125, 67);
+            this.TxtUserId.Location = new System.Drawing.Point(115, 65);
             this.TxtUserId.Name = "TxtUserId";
-            this.TxtUserId.Size = new System.Drawing.Size(113, 21);
+            this.TxtUserId.Size = new System.Drawing.Size(138, 21);
             this.TxtUserId.TabIndex = 2;
             this.TxtUserId.Text = "admin";
             this.TxtUserId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUserId_KeyPress);
             // 
             // TxtPassword
             // 
-            this.TxtPassword.Location = new System.Drawing.Point(125, 100);
+            this.TxtPassword.Location = new System.Drawing.Point(115, 92);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '●';
-            this.TxtPassword.Size = new System.Drawing.Size(113, 21);
+            this.TxtPassword.Size = new System.Drawing.Size(138, 21);
             this.TxtPassword.TabIndex = 3;
             this.TxtPassword.Text = "admin";
             this.TxtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPassword_KeyPress);
             // 
             // BtnLogin
             // 
-            this.BtnLogin.Location = new System.Drawing.Point(61, 135);
+            this.BtnLogin.Location = new System.Drawing.Point(67, 126);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(80, 31);
+            this.BtnLogin.Size = new System.Drawing.Size(82, 30);
             this.BtnLogin.TabIndex = 4;
             this.BtnLogin.Text = "로그인";
             this.BtnLogin.UseVisualStyleBackColor = true;
@@ -85,9 +86,9 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(155, 135);
+            this.BtnCancel.Location = new System.Drawing.Point(155, 126);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(80, 31);
+            this.BtnCancel.Size = new System.Drawing.Size(82, 30);
             this.BtnCancel.TabIndex = 5;
             this.BtnCancel.Text = "취소";
             this.BtnCancel.UseVisualStyleBackColor = true;
@@ -105,11 +106,11 @@
             this.Controls.Add(this.TxtUserId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";
             this.Resizable = false;
-            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "로그인";
             this.ResumeLayout(false);
             this.PerformLayout();

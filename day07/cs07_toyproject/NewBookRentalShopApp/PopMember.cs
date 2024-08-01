@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using MetroFramework;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace NewBookRentalShopApp
         {
             InitializeComponent();
         }
+
         private void PopMember_Load(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
@@ -25,18 +27,19 @@ namespace NewBookRentalShopApp
                 conn.Open();
 
                 var query = @"SELECT [memberIdx]
-                                   , [Names]
-                                   , [Levels]
-                                   , [Addr]
-                                   , [Mobile]
-                                   , [Email]
-                               FROM [membertbl]"; // 화면에 필요한 테이블 쿼리 변경
+                                  ,[Names]
+                                  ,[Levels]
+                                  ,[Addr]
+                                  ,[Mobile]
+                                  ,[Email]
+                              FROM [membertbl]"; // 화면에 필요한 테이블 쿼리 변경
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds, "membertbl");
-                // 컬럼이름 변경
+
                 DgvResult.DataSource = ds.Tables[0];
-                DgvResult.ReadOnly = true; // 수정 불가
+                DgvResult.ReadOnly = true; // 수정불가
+                // 컬럼이름 변경
                 DgvResult.Columns[0].HeaderText = "회원순번";
                 DgvResult.Columns[1].HeaderText = "회원명";
                 DgvResult.Columns[2].HeaderText = "등급";
@@ -46,26 +49,27 @@ namespace NewBookRentalShopApp
                 // 각 컬럼 넓이 지정
                 DgvResult.Columns[0].Width = 80;
                 DgvResult.Columns[1].Width = 80;
-                DgvResult.Columns[2].Width = 55;
+                DgvResult.Columns[2].Width = 50;
                 DgvResult.Columns[4].Width = 100;
-                DgvResult.Columns[5].Width = 150;
+                //DgvResult.Columns[5].Width = 73;
             }
         }
+
         private void DgvResult_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // 얘는 할거없음
+            // 얘는 구현할거없음
         }
 
-        private void btnSelect_Click(object sender, EventArgs e)
+        private void BtnSelect_Click(object sender, EventArgs e)
         {
             if (DgvResult.SelectedRows == null)
             {
-                MessageBox.Show("회원을 선택하세요.");
+                MetroMessageBox.Show(this, "회원을 선택하세요.", "회원선택", MessageBoxButtons.OK);
                 return;
             }
 
             var selData = DgvResult.SelectedRows[0];
-            //MessageBox.Show(selData.Cells[0].Value.ToString() + selData.Cells[1].Value.ToString());
+            // (selData.Cells[0].Value.ToString() + selData.Cells[1].Value.ToString());
             Helper.Common.SelMemberIdx = selData.Cells[0].Value.ToString();
             Helper.Common.SelMemberName = selData.Cells[1].Value.ToString();
 
@@ -75,7 +79,7 @@ namespace NewBookRentalShopApp
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            this.Close(); // 닫기
+            this.Close(); // 그냥 닫기
         }
     }
 }

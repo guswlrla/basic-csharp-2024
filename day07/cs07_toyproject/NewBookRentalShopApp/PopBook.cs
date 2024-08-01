@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using MetroFramework;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,22 +27,22 @@ namespace NewBookRentalShopApp
                 conn.Open();
 
                 var query = @"SELECT b.[bookIdx]
-                                   , b.[Author]
-                                   , b.[Division]
-	                               , d.Names AS DivNames
-                                   , b.[Names]
-                                   , b.[ReleaseDate]
-                                   , b.[ISBN]
-                                   , b.[Price]
-                                FROM [bookstbl] AS b
-                                JOIN divtbl AS d
-                                  ON b.Division = d.Division"; // 화면에 필요한 테이블 쿼리 변경
+                                      ,b.[Author]
+                                      ,b.[Division]
+	                                  ,d.Names AS DivNames
+                                      ,b.[Names]
+                                      ,b.[ReleaseDate]
+                                      ,b.[ISBN]
+                                      ,b.[Price]
+                                  FROM [bookstbl] AS b
+                                  JOIN divtbl AS d
+                                    ON b.Division = d.Division"; // 화면에 필요한 테이블 쿼리 변경
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds, "bookstbl");
 
                 DgvResult.DataSource = ds.Tables[0];
-                DgvResult.ReadOnly = true; // 수정 불가
+                DgvResult.ReadOnly = true; // 수정불가
                 DgvResult.Columns[0].HeaderText = "책순번";
                 DgvResult.Columns[1].HeaderText = "저자명";
                 DgvResult.Columns[2].HeaderText = "구분코드";
@@ -62,21 +63,20 @@ namespace NewBookRentalShopApp
 
         private void DgvResult_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // 얘는 할거없음
+            // 얘는 구현할거없음
         }
 
-        private void btnSelect_Click(object sender, EventArgs e)
+        private void BtnSelect_Click(object sender, EventArgs e)
         {
             if (DgvResult.SelectedRows == null)
             {
-                MessageBox.Show("책을 선택하세요.");
+                MetroMessageBox.Show(this, "책을 선택하세요.", "책선택", MessageBoxButtons.OK);
                 return;
             }
 
             var selData = DgvResult.SelectedRows[0];
-            //MessageBox.Show(selData.Cells[0].Value.ToString() + selData.Cells[1].Value.ToString());
             Helper.Common.SelBookIdx = selData.Cells[0].Value.ToString();
-            Helper.Common.SelBookName = selData.Cells[4].Value.ToString(); // 책제목 인덱스는 4
+            Helper.Common.SelBookName = selData.Cells[4].Value.ToString(); // 책제목은 index 4!!!
 
             this.DialogResult = DialogResult.Yes; // DialogResult 발생시킴
             this.Close();
@@ -84,7 +84,7 @@ namespace NewBookRentalShopApp
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            this.Close(); // 닫기
+            this.Close(); // 그냥 닫기
         }
     }
 }

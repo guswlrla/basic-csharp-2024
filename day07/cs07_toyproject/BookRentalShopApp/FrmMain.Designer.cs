@@ -29,25 +29,52 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
+            MnsBookRental = new MenuStrip();
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            toolStripMenuItem2 = new ToolStripMenuItem();
+            toolStripMenuItem3 = new ToolStripMenuItem();
             StsBookRental = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             toolStripStatusLabel2 = new ToolStripStatusLabel();
             toolStripStatusLabel3 = new ToolStripStatusLabel();
-            MnuBookRental = new MenuStrip();
-            toolStripMenuItem1 = new ToolStripMenuItem();
-            toolStripMenuItem2 = new ToolStripMenuItem();
-            toolStripMenuItem3 = new ToolStripMenuItem();
+            MnsBookRental.SuspendLayout();
             StsBookRental.SuspendLayout();
-            MnuBookRental.SuspendLayout();
             SuspendLayout();
+            // 
+            // MnsBookRental
+            // 
+            MnsBookRental.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2, toolStripMenuItem3 });
+            MnsBookRental.Location = new Point(20, 60);
+            MnsBookRental.Name = "MnsBookRental";
+            MnsBookRental.Size = new Size(758, 24);
+            MnsBookRental.TabIndex = 1;
+            MnsBookRental.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(57, 20);
+            toolStripMenuItem1.Text = "파일(&F)";
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(62, 20);
+            toolStripMenuItem2.Text = "관리(&M)";
+            // 
+            // toolStripMenuItem3
+            // 
+            toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(72, 20);
+            toolStripMenuItem3.Text = "도움말(&H)";
             // 
             // StsBookRental
             // 
             StsBookRental.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2, toolStripStatusLabel3 });
-            StsBookRental.Location = new Point(0, 428);
+            StsBookRental.Location = new Point(20, 454);
             StsBookRental.Name = "StsBookRental";
-            StsBookRental.Size = new Size(800, 22);
-            StsBookRental.TabIndex = 1;
+            StsBookRental.Size = new Size(758, 22);
+            StsBookRental.TabIndex = 2;
             StsBookRental.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
@@ -68,58 +95,32 @@
             toolStripStatusLabel3.Size = new Size(109, 17);
             toolStripStatusLabel3.Text = "LastLoginDateTime";
             // 
-            // MnuBookRental
-            // 
-            MnuBookRental.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2, toolStripMenuItem3 });
-            MnuBookRental.Location = new Point(0, 0);
-            MnuBookRental.Name = "MnuBookRental";
-            MnuBookRental.Size = new Size(800, 24);
-            MnuBookRental.TabIndex = 2;
-            MnuBookRental.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(57, 20);
-            toolStripMenuItem1.Text = "파일(&F)";
-            // 
-            // toolStripMenuItem2
-            // 
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(62, 20);
-            toolStripMenuItem2.Text = "관리(&M)";
-            // 
-            // toolStripMenuItem3
-            // 
-            toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(72, 20);
-            toolStripMenuItem3.Text = "도움말(&H)";
-            // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(798, 496);
             Controls.Add(StsBookRental);
-            Controls.Add(MnuBookRental);
+            Controls.Add(MnsBookRental);
             Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
-            MainMenuStrip = MnuBookRental;
+            Location = new Point(0, 0);
+            MainMenuStrip = MnsBookRental;
             Name = "FrmMain";
             Text = "책 대여점 v1.1";
             Load += FrmMain_Load;
+            MnsBookRental.ResumeLayout(false);
+            MnsBookRental.PerformLayout();
             StsBookRental.ResumeLayout(false);
             StsBookRental.PerformLayout();
-            MnuBookRental.ResumeLayout(false);
-            MnuBookRental.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private MenuStrip MnsBookRental;
         private StatusStrip StsBookRental;
-        private MenuStrip MnuBookRental;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem toolStripMenuItem3;

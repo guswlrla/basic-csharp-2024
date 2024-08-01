@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.DgvResult = new System.Windows.Forms.DataGridView();
-            this.btnSelect = new MetroFramework.Controls.MetroButton();
+            this.BtnSelect = new MetroFramework.Controls.MetroButton();
             this.BtnCancel = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.DgvResult)).BeginInit();
             this.SuspendLayout();
@@ -37,31 +37,31 @@
             // DgvResult
             // 
             this.DgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvResult.Location = new System.Drawing.Point(20, 63);
+            this.DgvResult.Location = new System.Drawing.Point(23, 63);
             this.DgvResult.MultiSelect = false;
             this.DgvResult.Name = "DgvResult";
             this.DgvResult.RowTemplate.Height = 23;
             this.DgvResult.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvResult.Size = new System.Drawing.Size(557, 278);
+            this.DgvResult.Size = new System.Drawing.Size(554, 278);
             this.DgvResult.TabIndex = 1;
             this.DgvResult.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResult_CellClick);
             // 
-            // btnSelect
+            // BtnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(431, 347);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(70, 30);
-            this.btnSelect.TabIndex = 2;
-            this.btnSelect.Text = "선택";
-            this.btnSelect.UseSelectable = true;
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            this.BtnSelect.Location = new System.Drawing.Point(431, 347);
+            this.BtnSelect.Name = "BtnSelect";
+            this.BtnSelect.Size = new System.Drawing.Size(70, 30);
+            this.BtnSelect.TabIndex = 2;
+            this.BtnSelect.Text = "선택";
+            this.BtnSelect.UseSelectable = true;
+            this.BtnSelect.Click += new System.EventHandler(this.BtnSelect_Click);
             // 
             // BtnCancel
             // 
             this.BtnCancel.Location = new System.Drawing.Point(507, 347);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(70, 30);
-            this.BtnCancel.TabIndex = 2;
+            this.BtnCancel.TabIndex = 3;
             this.BtnCancel.Text = "취소";
             this.BtnCancel.UseSelectable = true;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
@@ -72,11 +72,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
             this.Controls.Add(this.BtnCancel);
-            this.Controls.Add(this.btnSelect);
+            this.Controls.Add(this.BtnSelect);
             this.Controls.Add(this.DgvResult);
             this.Name = "PopMember";
             this.Resizable = false;
-            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "회원선택";
             this.Load += new System.EventHandler(this.PopMember_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvResult)).EndInit();
@@ -87,7 +86,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DgvResult;
-        private MetroFramework.Controls.MetroButton btnSelect;
+        private MetroFramework.Controls.MetroButton BtnSelect;
         private MetroFramework.Controls.MetroButton BtnCancel;
     }
 }
