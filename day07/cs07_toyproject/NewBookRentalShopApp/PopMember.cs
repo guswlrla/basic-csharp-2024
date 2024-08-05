@@ -27,11 +27,11 @@ namespace NewBookRentalShopApp
                 conn.Open();
 
                 var query = @"SELECT [memberIdx]
-                                  ,[Names]
-                                  ,[Levels]
-                                  ,[Addr]
-                                  ,[Mobile]
-                                  ,[Email]
+                                   ,[Names]
+                                   ,[Levels]
+                                   ,[Addr]
+                                   ,[Mobile]
+                                   ,[Email]
                               FROM [membertbl]"; // 화면에 필요한 테이블 쿼리 변경
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataSet ds = new DataSet();
